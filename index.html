@@ -102,7 +102,25 @@
     <h3 id=”Analysis and discussion”>Analysis and discussion</h3>
     <p class="ex1">
       <pre>
-        WRITE PARAGRAPH HERE
+        Henley et al (2024) used data from the study by Finch et al (2016) to create their models, and since bats use echolocation Finch et al 
+        (2016) decided to use passive acoustic bat detectors - which are generally used to identify bat calls and species - to detect bats in 
+        an area. “Surveys are conducted by placing detectors …  detectors then record [the bats] … The coordinates of each detector are noted 
+        and a series of recordings is produced, providing a spatio-temporal map of bat presence. Furthermore, the species … can be identified …”
+        - Henley et al (2024) This means that using recordings of bats picked up by the detectors and the detector locations (measured in 
+        eastings and northings), a map can be made illustrating areas of higher and lower levels of activity. This may be helpful in locating 
+        roosts since each bat returns to rest, coming and going frequently meaning the roost should be in a very active area. Since each species
+        uses different frequencies and calls, this can help identify which species the colony is. Finch et al (2016)’s study looked at 6 roost 
+        locations of greater horseshoe bats in the UK, and Henley et al (2024) noted that the timeframe for recordings could be limited to the 
+        first 90 minutes after sunset as this is the most active time for this species. 
+
+        Using a deterministic partial differential equation (PDE) diffusion model Henley et al (2024) were able to estimate an approximation 
+        for the proportion of bat calls at each detector using a predicted roost location. Since bats will spread out to forage after sunset, 
+        they can be modelled as diffusive particles. Bats don’t tend to stray too far from their roost so it is assumed that the detectors with 
+        the least activity will be furthest from the roost, and using the detector information they created likelihood maps for each location, 
+        shown in figure 1 below.
+
+
+        
       </pre>
     </p>
 
