@@ -77,7 +77,7 @@
         in locating roosts helps reduce labour costs and search time and lessens the chances of accidentally disturbing the population they 
         are trying to study. Using bat detectors, Cardiff School of Mathematics and the University of Sussex have created an algorithm that 
         allows them to make likelihood maps showing predicted locations of horseshoe bat roosts in an area, reducing the search area. 
-        Henley et al (2016)’s predicted locations were very accurate for 5/6 of the studies by Finch et al (2016). This new method could help 
+        <a href="#References">Henley et al (2024)</a>’s predicted locations were very accurate for 5/6 of the studies by <a href="#References">Finch et al (2020)</a>. This new method could help 
         conservationists across the globe to better locate and protect bat colonies from extinction.
       </pre>
     </p>
@@ -87,32 +87,32 @@
       <pre>
         Bats play a vital role in our ecosystems, from dispersing seeds to pest control and pollination, but are currently facing extinction 
         due to chemical, light and air pollution, climate change, onshore wind turbines, building works and roost disturbances alongside other 
-        factors (bat conservation trust 2021). Locating bat roosts has been challenging conservationists for years, and sometimes in their 
+        factors (<a href="#References">bat conservation trust 2021</a>). Locating bat roosts has been challenging conservationists for years, and sometimes in their 
         search they may accidentally disturb the maternity roosts they set out to study, which can result in decreased chances of adult female 
         bat survival and reduced success of breeding. Locating roosts in a safer and less time-consuming, more cost-efficient manner could 
         help reduce chances of accidental roost disturbances and allow conservationists to better record bat activity and population. In the 
-        research presented by Henley et al (2024), audio detectors, a bat movement model and some algorithms were used to create roost 
+        research presented by <a href="#References">Henley et al (2024)</a>, audio detectors, a bat movement model and some algorithms were used to create roost 
         likelihood maps. This helps to reduce labour costs, search time and search area, and point out likely locations so that 
         conservationists could take extra care in those areas, lowering chances of accidental disturbances. This article will firstly discuss 
-        research and methods used by Henley et al (2024) in more depth, followed by an assessment of the outcomes the model’s future utility.
+        research and methods used by <a href="#References">Henley et al (2024)</a> in more depth, followed by an assessment of the outcomes the model’s future utility.
       </pre>
     </p>
 
     <h3 id="Analysis and discussion">Analysis and discussion</h3>
     <p class="ex1">
       <pre>
-        Henley et al (2024) used data from the study by Finch et al (2016) to create their models, and since bats use echolocation Finch et al 
-        (2016) decided to use passive acoustic bat detectors - which are generally used to identify bat calls and species - to detect bats in 
-        an area. “Surveys are conducted by placing detectors …  detectors then record [the bats] … The coordinates of each detector are noted 
+        <a href="#References">Henley et al (2024)</a> used data from the study by <a href="#References">Finch et al (2020)</a> to create their models, and since bats use echolocation <a href="#References">Finch et al 
+        (2020)</a> decided to use passive acoustic bat detectors - which are generally used to identify bat calls and species - to detect bats in 
+        an area. “Surveys are conducted by placing detectors … detectors then record [the bats] … The coordinates of each detector are noted 
         and a series of recordings is produced, providing a spatio-temporal map of bat presence. Furthermore, the species … can be identified …”
-        - Henley et al (2024) This means that using recordings of bats picked up by the detectors and the detector locations (measured in 
+        - <a href="#References">Henley et al (2024)</a>. This means that using recordings of bats picked up by the detectors and the detector locations (measured in 
         eastings and northings), a map can be made illustrating areas of higher and lower levels of activity. This may be helpful in locating 
         roosts since each bat returns to rest, coming and going frequently meaning the roost should be in a very active area. Since each species
-        uses different frequencies and calls, this can help identify which species the colony is. Finch et al (2016)’s study looked at 6 roost 
-        locations of greater horseshoe bats in the UK, and Henley et al (2024) noted that the timeframe for recordings could be limited to the 
+        uses different frequencies and calls, this can help identify which species the colony is. <a href="#References">Finch et al (2020)</a>’s study looked at 4 roost 
+        locations of greater horseshoe bats in the UK, and <a href="#References">Henley et al (2024)</a> noted that the timeframe for recordings could be limited to the 
         first 90 minutes after sunset as this is the most active time for this species. 
 
-        Using a deterministic partial differential equation (PDE) diffusion model Henley et al (2024) were able to estimate an approximation 
+        Using a deterministic partial differential equation (PDE) diffusion model <a href="#References">Henley et al (2024)</a> were able to estimate an approximation 
         for the proportion of bat calls at each detector using a predicted roost location. Since bats will spread out to forage after sunset, 
         they can be modelled as diffusive particles. Bats don’t tend to stray too far from their roost so it is assumed that the detectors with 
         the least activity will be furthest from the roost, and using the detector information they created likelihood maps for each location, 
@@ -124,10 +124,32 @@
             Graph plotting the frequency of bat calls at each detector location showing areas of greater activity. Black crosses are the 
             detectors, roost location is a white circle and the estimated location is a white diamond. The white square shows the geometric 
             mean of the proportion of calls. The black square in the final graph shows the location of the more recently found second roost in 
-            the area. (Figure from Henley et al (2024)) 
+            the area. (Figure from <a href="#References">Henley et al (2024)</a>) 
           </p>
         </div>
 
+        Given that each location was between 9.5-27km^2, the predicted locations were quite accurate, generally reducing search area by about
+        90%. The researchers noted that smaller colonies resulted in less recordings; to gain a more accurate prediction areas should be 
+        surveyed for longer. The estimate for Buckfastley  5th September 2016 was less accurate however with the predicted roost location 
+        approximately 2.5km away, meaning the search area only decreased by about 64%, worse than other surveys at this location. They note 
+        there could be multiple reasons for this: Firstly the detectors were further apart compared to the previous two surveys; secondly a 
+        second roost was discovered nearby meaning not all bats recorded may have been from the main roost; furthermore the detectors were not 
+        as close to the roost as the previous surveys were, and the maternity season was over meaning some female bats stay with males in mating 
+        roosts instead of the maternity roost.
+        
+        However, each survey’s roost location was already known or suspected; For this model to be useful we need to apply it when we don’t 
+        know the roost’s whereabouts. The research addressed this, mentioning that they need to assess how accurate the model is at predicting 
+        roost locations outside of detector range, and when we don’t know the roost location. They tested this using the High Marks Burn survey 
+        (22 August 2016) without using data from southern detectors, since this survey used the most detectors and because the land southwest of 
+        the roost was private, allowing them to simulate a worst case scenario where a roost is on private land where detectors cannot be placed. 
+        In doing this the predicted roost still lies within the detectors but the model can highlight likely areas beyond the detectors. Figure 2 
+        shows the roost is likely south of the detectors so researchers could move detectors for better predictions.
+        
+        In conclusion, when in the correct area surrounding a roost the model is quite accurate, and when detectors are not in the correct area
+        to successfully identify accurate roost locations the model can still provide a map that should show more likely areas, meaning that 
+        overall cost and time spent trying to find the roost should decrease as less of the area will need to be searched by foot. This could aid 
+        in finding maternity roosts in difficult terrains and in large areas that would be very time consuming on foot and could have global use 
+        in locating and protecting bats. 
 
         
       </pre>
